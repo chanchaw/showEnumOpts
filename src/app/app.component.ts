@@ -172,6 +172,7 @@ export class AppComponent {
 
     // 下面一行代码可以代替上面从158开始到本行的所有代码
     // return arr1.map(v => v.split('=')).filter(v => v[0] == record[tsRow.field_name]).map(v => v[1]);
+    /// 请注意返回类型，map()方法将返回一个数组。
   }
 
   
