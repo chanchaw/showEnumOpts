@@ -1,27 +1,9 @@
-# ShowEnumOpts
+### 概述
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
+本案例为解决一特定问题而提交的，一个对象的属性 `one_way` 会储存整数类型1或者2，在显示到前端时候需要对应的显示为：单程或者往返，即：1=单程，2=往返。
 
-## Development server
+案例中给出了本地数据（JSON格式）来填充到一个表格组件中，同时表格列的显示是通过 `ts` 文件中的属性 `tableStyle` 来控制，本数组中的第三个元素（index = 2）中有个属性 `opts` 即表示了上面的：1=单程，2=往返
+通过方法 `showEnumOptsLabel` 执行逻辑判断最终返回给视图，看控制台的打印能看到执行的逻辑是对的，但是并没有显示到视图上，这是为什么？
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+有必要的话：QQ = 409223171
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
