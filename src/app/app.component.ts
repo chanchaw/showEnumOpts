@@ -155,18 +155,23 @@ export class AppComponent {
     if( opts.length<=0 ) return record[tsRow.field_name];
     
     let arr1 = opts.split(',');
-    console.log('选项字符串是：' + opts);
+    let ret = null;
+    // console.log('选项字符串是：' + opts);
     arr1.forEach(ele1 => {
       let arr2 = ele1.split('=');
       let val1 = arr2[0] + '';
       let val2 = record[tsRow.field_name] + '';
       if( val1 == val2 ) {
         console.log('主键'+record.iid+'为字段' +tsRow.field_name+'返回：' + arr2[1]);
+        ret = arr2[1];
         return arr2[1];
       }
     });
 
-    return record[tsRow.field_name];
+    return ret === null?record[tsRow.field_name]:ret;
+
+    // 下面一行代码可以代替上面从158开始到本行的所有代码
+    // return arr1.map(v => v.split('=')).filter(v => v[0] == record[tsRow.field_name]).map(v => v[1]);
   }
 
   

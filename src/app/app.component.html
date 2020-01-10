@@ -7,9 +7,13 @@
   <tbody>
     <tr *ngFor="let data of zorroTable.data">
       <td *ngFor="let tsRow of tableStyle">
-        <ng-container *ngIf="tsRow?.opts.length>0;else elseBlock">
+        <!-- <ng-container *ngIf="tsRow?.opts.length>0;else elseBlock">
           {{ showEnumOptsLabel(data,tsRow) }}
-        </ng-container>
+        </ng-container> -->
+
+        <div *ngIf="1==1;else elseBlock">
+          {{ showEnumOptsLabel(data,tsRow) }}
+        </div>
 
         <ng-template #elseBlock>
           {{ data[tsRow.field_name] }}
